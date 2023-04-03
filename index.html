@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="barChart"></div>
+<div id="map">% of total pop in age group</div>
+
+<script>
+
+//"B25093001":"Total",
+var percentIncomeByAge = {	
+	"age 15-24":{
+	"B25093002":"Total",
+	"B25093003":"<20%",
+	"B25093004":"20% - 24.9%",
+	"B25093005":"25% - 29.9%",
+	"B25093006":"30% - 34.9%",
+	"B25093007":">35%",
+	"B25093008":"Not Computed"},
+	
+	"age 25-34":{
+		"B25093009":"Total",
+	"B25093010":"<20%",
+	"B25093011":"20% - 24.9%",
+	"B25093012":"25% - 29.9%",
+	"B25093013":"30% - 34.9%",
+	"B25093014":">35%",
+	"B25093015":"Not Computed"},
+	
+	"age 35-64":{
+		"B25093016":"Total",
+	"B25093017":"<20%",
+	"B25093018":"20% - 24.9%",
+	"B25093019":"25% - 29.9%",
+	"B25093020":"30% - 34.9%",
+	"B25093021":">35%",
+	"B25093022":"Not Computed"},
+	
+	"age 65+":{
+		"B25093023":"Total",
+	"B25093024":"<20%",
+	"B25093025":"20% - 24.9%",
+	"B25093026":"25% - 29.9%",
+	"B25093027":"30% - 34.9%",
+	"B25093028":">35%",
+	"B25093029":"Not Computed"}}
+	
+var colors = {"<20%":"#E62790",
+"20% - 24.9%":"#20659D",
+"25% - 29.9%":"#00906E",
+"30% - 34.9%":"#249EDC",
+">35%":"#A56EFF",
+	"Not Computed":"#aaa"}
+
+var percentIncomeByAgeData = d3.csv("R13342071_SL010.csv")
+	
+var countyPercentIncomeByAgeData = d3.csv('R13341999_SL050.csv')
+
+Promise.all([percentIncomeByAgeData,d3.json("counties_shapefile.geojson"),countyPercentIncomeByAgeData])
+	.then(function(d){
+		var topo = d[1]
+		var countyData = d[2]
+		var stackData = formatForStack(d[0][0])
+		var stackDataPercent = formatForStackPercent(d[0][0])
+		drawKey()
+		
+		barChart(stackData,70000000,"count")
+		barChart(stackDataPercent,1,"percent")
+		
+		
+		
+		for(var g in percentIncomeByAge){
+			console.log(g)
+			d3.select("#map").append("div").html(g)
+			var cats = percentIncomeByAge[g]
+			for(var c in cats){
+				if(cats[c]=="Total"){
+					var totalKey = c
+				}
+			}
+			for(var c in cats){
+					if(cats[c]!="Total"){
+				var key = c
+						var label = cats[c]
+				var formattedCountyData = formatMapData(countyData,key,totalKey)
+				var mapColor = colors[label]
+				drawMap(topo,formattedCountyData,mapColor,label)
+					}
+			}
+				//break
+			
+		}
+		
+	})
+	
+	function formatMapData(data, key,totalKey){
+		//console.log(data,key,totalKey)
+		var formatted = {}
+		for(var i in data){
+			var geoid = data[i]["Geo_FIPS"]
+			var total =  data[i]["ACS21_5yr_"+totalKey]
+			if(total>0){
+			var value =  data[i]["ACS21_5yr_"+key]
+			var percent = value/total
+			formatted[geoid]=percent
+			}
+			
+		}
+		//console.log(formatted)
+		return formatted
+	}
+	
+	function drawMap(topo,countyData,color,label){
+	  // The svg
+//console.log(topo,countyData)
+	  // Data and color scale
+	  const colorScale = d3.scaleLinear()
+	    .domain([0,1])
+	    .range(["#fff",color]);
+
+	   	  // Map and projection
+			 var padding = 20
+			 var height = 300
+			 var width = 400
+	 	  const svg = d3.select("#map").append("svg").attr("height",height).attr("width",width)
+		svg.append("text").text("label").attr("x",20).attr("y",20)
+	   	  const path = d3.geoPath();
+	   	  const projection = d3.geoAlbersUsa()//.scale(1000)//.translate([487.5, 305])
+	                       .fitExtent([[padding,padding],[width-padding,height-padding]],topo)
+			 
+
+	      // Draw the map
+	    svg.append("g")
+	      .selectAll("path")
+	      .data(topo.features)
+	      .join("path")
+	        // draw each country
+	        .attr("d", d3.geoPath()
+	          .projection(projection)
+	        )
+	        // set the color of each country
+	        .attr("fill", function (d) {
+				var geoid = d.properties.GEOID
+				var percentValue = countyData[geoid]
+				if(Object.keys(countyData).indexOf(geoid)==-1){
+					return"#ddd"
+				}else{
+					//console.log(percentValue)
+					return colorScale(percentValue)
+				}
+	        })
+	}
+	
+	
+	function drawKey(){
+		var keyDiv = d3.select("#barChart").append("div").style("margin","10px").style("padding","10px")
+		.style("width","300px")
+		.style("border","1px solid black")
+		keyDiv.append("div").html("% of income")
+		
+		keyDiv.selectAll(".keyLabel")
+		.data(Object.keys(colors))
+		.enter()
+		.append("div").style("margin","2px")
+		.style("width","20px")
+		.style("height","20px")
+		.style("background-color",function(d){return colors[d]})
+		.append("div")
+		.style("width","200px")
+		.style("height","20px")
+		.style("margin-left","30px")
+		.html(function(d){return d})
+	}
+	
+	function formatForStackPercent(data){
+		//console.log(data)
+		var formatted = []
+		var columns = []
+		for(var d in percentIncomeByAge){
+			var groupData = {}
+			var group = d
+			groupData["group"]=group
+			
+			var keys = percentIncomeByAge[d]
+			
+			for(var k in keys){
+				var label = keys[k]
+				var key = "ACS21_5yr_"+k
+				
+				if(label=="Total"){
+					var total = data[key]
+				}
+			}
+			
+			for(var k in keys){
+				
+				var label = keys[k]
+				if(label!="Total"){
+					var key = "ACS21_5yr_"+k
+					var value = data[key]
+					var percent = value/total
+					//console.log(value, total,percent)
+					groupData[label]=percent
+					if(columns.indexOf(label)==-1){
+						columns.push(label)
+					}
+				}
+				//console.log(label,key,value)
+			}
+		formatted.push(groupData)	
+		}
+		return [formatted,columns]
+		
+	}
+
+	function formatForStack(data){
+		//console.log(data)
+		var formatted = []
+		var columns = []
+		for(var d in percentIncomeByAge){
+			var groupData = {}
+			var group = d
+			groupData["group"]=group
+			
+			var keys = percentIncomeByAge[d]
+			
+			// for(var k in keys){
+		// 		var label = keys[k]
+		// 		var key = "ACS21_5yr_"+k
+		//
+		// 		if(label=="Total"){
+		// 			var total = data[key]
+		// 		}
+		// 	}
+			
+			for(var k in keys){
+				
+				var label = keys[k]
+				if(label!="Total" && label!="Not Computed"){
+					var key = "ACS21_5yr_"+k
+					var value = data[key]
+					groupData[label]=value
+					if(columns.indexOf(label)==-1){
+						columns.push(label)
+					}
+				}
+				//console.log(label,key,value)
+			}
+		formatted.push(groupData)	
+		}
+		return [formatted,columns]
+		
+	}
+
+function barChart(data,max,mode){
+	const columns = data[1]
+	var groupData = data[0]
+	//console.log(columns)
+	const stackedData = d3.stack()
+		.keys(columns)
+		(groupData)
+	//console.log(stackedData)
+	
+var height = 400
+	var width = 400
+	var ph = 20
+	var pw = 80
+	var svg = d3.select("#barChart").append("svg").attr("width",width+pw*2).attr("height",height+ph*2)
+
+  // Add Y axis
+	svg.append("text").text(mode).attr("x",10).attr("y",20)
+  const y = d3.scaleLinear()
+    .domain([0,  max])
+    .range([0, height]);
+	
+  const groups = data.map(d => (d.group))
+	
+  const x = d3.scaleBand()
+      .domain(groups)
+      .range([0, width])
+	console.log(columns)
+
+     // .padding([0.2])
+	for(var g in stackedData){
+		var slice = stackedData[g]
+		
+	  svg.append("g")
+	    .selectAll(".bars")
+	    // Enter in the stack data = loop key per key = group per group
+	    .data(slice)
+	    .enter()
+		.append("rect")
+	      .attr("fill", function(d,i){
+			  return colors[slice.key]
+		  })
+	        .attr("y", function(d,i){
+				return i*60
+	        })
+	        .attr("x",function(d){
+				return y(d[0])
+	        })
+	        .attr("width", d => y(d[1]) - y(d[0])-2)
+	        .attr("height",30)
+			.attr("transform","translate("+pw+","+ph+")")
+			
+			
+			
+  	  svg.append("g")
+  	    .selectAll(".numberLabels")
+  	    // Enter in the stack data = loop key per key = group per group
+  	    .data(slice)
+  	    .enter()
+  		.append("text")
+  	     .text(function(d){
+			 if(mode =="percent"){
+			 	return Math.round((d[1]-d[0])*100)+"%"
+			 }else{
+				 if((d[1]-d[0])/1000>3000){
+			 		 return Math.round((d[1]-d[0])/1000000)+"M"
+				 }
+			 }
+  	     	
+  	     })
+  	        .attr("y", function(d,i){
+  				return i*60+45
+  	        })
+  	        .attr("x",function(d){
+  				return y(d[0])+5
+  	        })
+			.attr("transform","translate("+pw+","+ph+")")
+  	       
+		   
+     	  
+			//break
+			
+			if(g==0){
+				//console.log(slice,g)
+				svg.selectAll(".label")
+				.data(slice)
+				.enter()
+				.append("text")
+				.text(function(d){
+				
+					//console.log(d)
+					return d.data.group
+				})
+		        .attr("x",function(d){
+					return -10
+		        })
+				.attr("y",function(d,i){
+					return i*60+20
+				})
+			.attr("transform","translate("+pw+","+ph+")")
+				.style("text-anchor","end")
+			
+			}
+	}
+	
+  
+}
+
+
+</script>

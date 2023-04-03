@@ -1,0 +1,422 @@
+--------------------------------------------------------------------------------
+Codebook for Social Explorer report ID: R13342071
+--------------------------------------------------------------------------------
+
+Contents
+    - Table Summary
+    - Data Dictionary
+    - Citation and Use
+
+
+--------------------------------------------------------------------------------
+Table Summary
+--------------------------------------------------------------------------------
+ 
+Survey:           ACS 2021 (5-Year Estimates)
+Dataset:          Social Explorer Tables: ACS 2021 (5-Year Estimates)
+Tables:
+
+      1. Housing Units by Housing Costs as a Percentage of Household Income in the Past 12 Months
+         Universe:  Universe:  Occupied housing units
+         Name:      A10026
+         Variables:
+            A10026_001:   Occupied Housing Units:
+            A10026_002:      Less than $20,000:
+            A10026_003:         Less than 20 Percent
+            A10026_004:         20 to 29 Percent
+            A10026_005:         30 Percent or More
+            A10026_006:      $20,000 to $34,999:
+            A10026_007:         Less than 20 Percent
+            A10026_008:         20 to 29 Percent
+            A10026_009:         30 Percent or More
+            A10026_010:      $35,000 to $49,999:
+            A10026_011:         Less than 20 Percent
+            A10026_012:         20 to 29 Percent
+            A10026_013:         30 Percent or More
+            A10026_014:      $50,000 to $74,999:
+            A10026_015:         Less than 20 Percent
+            A10026_016:         20 to 29 Percent
+            A10026_017:         30 Percent or More
+            A10026_018:      $75,000 or More:
+            A10026_019:         Less than 20 Percent
+            A10026_020:         20 to 29 Percent
+            A10026_021:         30 Percent or More
+            A10026_022:      Zero or Negative Income
+            A10026_023:      No Cash Rent
+
+
+
+
+
+Survey:           ACS 2021 (5-Year Estimates)
+Dataset:          American Community Survey 2021
+Tables:
+
+      1. Age Of Householder By Gross Rent As A Percentage Of Household Income In The Past 12 Months
+         Universe:  Universe:  Renter-occupied housing units
+         Name:      B25072
+         Variables:
+            B25072001:   Total:
+            B25072002:      Householder 15 To 24 Years:
+            B25072003:         Less Than 20.0 Percent
+            B25072004:         20.0 To 24.9 Percent
+            B25072005:         25.0 To 29.9 Percent
+            B25072006:         30.0 To 34.9 Percent
+            B25072007:         35.0 Percent Or More
+            B25072008:         Not Computed
+            B25072009:      Householder 25 To 34 Years:
+            B25072010:         Less Than 20.0 Percent
+            B25072011:         20.0 To 24.9 Percent
+            B25072012:         25.0 To 29.9 Percent
+            B25072013:         30.0 To 34.9 Percent
+            B25072014:         35.0 Percent Or More
+            B25072015:         Not Computed
+            B25072016:      Householder 35 To 64 Years:
+            B25072017:         Less Than 20.0 Percent
+            B25072018:         20.0 To 24.9 Percent
+            B25072019:         25.0 To 29.9 Percent
+            B25072020:         30.0 To 34.9 Percent
+            B25072021:         35.0 Percent Or More
+            B25072022:         Not Computed
+            B25072023:      Householder 65 Years And Over:
+            B25072024:         Less Than 20.0 Percent
+            B25072025:         20.0 To 24.9 Percent
+            B25072026:         25.0 To 29.9 Percent
+            B25072027:         30.0 To 34.9 Percent
+            B25072028:         35.0 Percent Or More
+            B25072029:         Not Computed
+
+
+      2. Age Of Householder By Gross Rent As A Percentage Of Household Income In The Past 12 Months
+         Universe:  Universe:  Renter-occupied housing units
+         Name:      B25072_se
+         Variables:
+            B25072001s:   Std. Error: Total:
+            B25072002s:      Std. Error: Householder 15 To 24 Years:
+            B25072003s:         Std. Error: Less Than 20.0 Percent
+            B25072004s:         Std. Error: 20.0 To 24.9 Percent
+            B25072005s:         Std. Error: 25.0 To 29.9 Percent
+            B25072006s:         Std. Error: 30.0 To 34.9 Percent
+            B25072007s:         Std. Error: 35.0 Percent Or More
+            B25072008s:         Std. Error: Not Computed
+            B25072009s:      Std. Error: Householder 25 To 34 Years:
+            B25072010s:         Std. Error: Less Than 20.0 Percent
+            B25072011s:         Std. Error: 20.0 To 24.9 Percent
+            B25072012s:         Std. Error: 25.0 To 29.9 Percent
+            B25072013s:         Std. Error: 30.0 To 34.9 Percent
+            B25072014s:         Std. Error: 35.0 Percent Or More
+            B25072015s:         Std. Error: Not Computed
+            B25072016s:      Std. Error: Householder 35 To 64 Years:
+            B25072017s:         Std. Error: Less Than 20.0 Percent
+            B25072018s:         Std. Error: 20.0 To 24.9 Percent
+            B25072019s:         Std. Error: 25.0 To 29.9 Percent
+            B25072020s:         Std. Error: 30.0 To 34.9 Percent
+            B25072021s:         Std. Error: 35.0 Percent Or More
+            B25072022s:         Std. Error: Not Computed
+            B25072023s:      Std. Error: Householder 65 Years And Over:
+            B25072024s:         Std. Error: Less Than 20.0 Percent
+            B25072025s:         Std. Error: 20.0 To 24.9 Percent
+            B25072026s:         Std. Error: 25.0 To 29.9 Percent
+            B25072027s:         Std. Error: 30.0 To 34.9 Percent
+            B25072028s:         Std. Error: 35.0 Percent Or More
+            B25072029s:         Std. Error: Not Computed
+
+
+      3. Age Of Householder By Selected Monthly Owner Costs As A Percentage Of Household Income In The Past 12 Months
+         Universe:  Universe:  Owner-occupied housing units
+         Name:      B25093
+         Variables:
+            B25093001:   Total:
+            B25093002:      Householder 15 To 24 Years:
+            B25093003:         Less Than 20.0 Percent
+            B25093004:         20.0 To 24.9 Percent
+            B25093005:         25.0 To 29.9 Percent
+            B25093006:         30.0 To 34.9 Percent
+            B25093007:         35.0 Percent Or More
+            B25093008:         Not Computed
+            B25093009:      Householder 25 To 34 Years:
+            B25093010:         Less Than 20.0 Percent
+            B25093011:         20.0 To 24.9 Percent
+            B25093012:         25.0 To 29.9 Percent
+            B25093013:         30.0 To 34.9 Percent
+            B25093014:         35.0 Percent Or More
+            B25093015:         Not Computed
+            B25093016:      Householder 35 To 64 Years:
+            B25093017:         Less Than 20.0 Percent
+            B25093018:         20.0 To 24.9 Percent
+            B25093019:         25.0 To 29.9 Percent
+            B25093020:         30.0 To 34.9 Percent
+            B25093021:         35.0 Percent Or More
+            B25093022:         Not Computed
+            B25093023:      Householder 65 Years And Over:
+            B25093024:         Less Than 20.0 Percent
+            B25093025:         20.0 To 24.9 Percent
+            B25093026:         25.0 To 29.9 Percent
+            B25093027:         30.0 To 34.9 Percent
+            B25093028:         35.0 Percent Or More
+            B25093029:         Not Computed
+
+
+      4. Age Of Householder By Selected Monthly Owner Costs As A Percentage Of Household Income In The Past 12 Months
+         Universe:  Universe:  Owner-occupied housing units
+         Name:      B25093_se
+         Variables:
+            B25093001s:   Std. Error: Total:
+            B25093002s:      Std. Error: Householder 15 To 24 Years:
+            B25093003s:         Std. Error: Less Than 20.0 Percent
+            B25093004s:         Std. Error: 20.0 To 24.9 Percent
+            B25093005s:         Std. Error: 25.0 To 29.9 Percent
+            B25093006s:         Std. Error: 30.0 To 34.9 Percent
+            B25093007s:         Std. Error: 35.0 Percent Or More
+            B25093008s:         Std. Error: Not Computed
+            B25093009s:      Std. Error: Householder 25 To 34 Years:
+            B25093010s:         Std. Error: Less Than 20.0 Percent
+            B25093011s:         Std. Error: 20.0 To 24.9 Percent
+            B25093012s:         Std. Error: 25.0 To 29.9 Percent
+            B25093013s:         Std. Error: 30.0 To 34.9 Percent
+            B25093014s:         Std. Error: 35.0 Percent Or More
+            B25093015s:         Std. Error: Not Computed
+            B25093016s:      Std. Error: Householder 35 To 64 Years:
+            B25093017s:         Std. Error: Less Than 20.0 Percent
+            B25093018s:         Std. Error: 20.0 To 24.9 Percent
+            B25093019s:         Std. Error: 25.0 To 29.9 Percent
+            B25093020s:         Std. Error: 30.0 To 34.9 Percent
+            B25093021s:         Std. Error: 35.0 Percent Or More
+            B25093022s:         Std. Error: Not Computed
+            B25093023s:      Std. Error: Householder 65 Years And Over:
+            B25093024s:         Std. Error: Less Than 20.0 Percent
+            B25093025s:         Std. Error: 20.0 To 24.9 Percent
+            B25093026s:         Std. Error: 25.0 To 29.9 Percent
+            B25093027s:         Std. Error: 30.0 To 34.9 Percent
+            B25093028s:         Std. Error: 35.0 Percent Or More
+            B25093029s:         Std. Error: Not Computed
+
+
+
+
+
+ 
+ 
+ 
+--------------------------------------------------------------------------------
+Data Dictionary
+--------------------------------------------------------------------------------
+ 
+Variables 
+      FIPS:           FIPS
+      QName:          Qualifying Name
+      FILEID:         File identification
+      STUSAB:         State Postal Abbreviation
+      SUMLEV:         Summary Level
+      GEOCOMP:        Geographic Component
+      LOGRECNO:       Logical Record Number
+      US:             US
+      REGION:         Census Region
+      DIVISION:       Census Division
+      STATECE:        State (Census Code)
+      STATE:          State (FIPS Code)
+      COUNTY:         County of current residence
+      COUSUB:         County Subdivision (FIPS)
+      PLACE:          Place (FIPS Code)
+      TRACT:          Census Tract
+      BLKGRP:         Block Group
+      CONCIT:         Consolidated City
+      AIANHH:         American Indian Area/AlaskaNative Area/ Hawaiian Home Land(Census)
+      AIANHHFP:       American Indian Area/AlaskaNative Area/ Hawaiian Home Land(FIPS)
+      AIHHTLI:        American Indian Trust Land/Hawaiian Home Land Indicator
+      AITSCE:         American Indian TribalSubdivision (Census)
+      AITS:           American Indian TribalSubdivision (FIPS)
+      ANRC:           Alaska Native RegionalCorporation (FIPS)
+      CBSA:           Metropolitan and MicropolitanStatistical Area
+      CSA:            Combined Statistical Area
+      METDIV:         Metropolitan Statistical Area-Metropolitan Division
+      MACC:           Metropolitan Area Central City
+      MEMI:           Metropolitan/MicropolitanIndicator Flag
+      NECTA:          New England City and Town Area
+      CNECTA:         New England City and TownCombined Statistical Area
+      NECTADIV:       New England City and Town AreaDivision
+      UA:             Urban Area
+      UACP:           Urban Area Central Place
+      CDCURR:         Current Congressional District ***
+      SLDU:           State Legislative District Upper
+      SLDL:           State Legislative District Lower
+      VTD:            Voting District
+      ZCTA3:          ZIP Code Tabulation Area (3-digit)
+      ZCTA5:          5-digit ZIP Code Tabulation Area
+      SUBMCD:         Subminor Civil Division (FIPS)
+      SDELM:          State-School District (Elementary)
+      SDSEC:          State-School District (Secondary)
+      SDUNI:          State-School District (Unified)
+      UR:             Urban/Rural
+      PCI:            Principal City Indicator
+      TAZ:            Traffic Analysis Zone
+      UGA:            Urban Growth Area
+      PUMA5:          Public Use Microdata Area – 5%File
+      PUMA1:          Public Use Microdata Area - 1% File
+      GEOID:          Geographic Identifier
+      NAME:           Area Name
+      BTTR:           Tribal Tract
+      BTBG:           Tribal Block Group
+      PLACESE:        Place (State FIPS + Place FIPS)
+      A10026_001:     Occupied Housing Units
+      A10026_002:     Occupied Housing Units: Less than $20,000
+      A10026_003:     Occupied Housing Units: Less than $20,000: Less than 20 Percent
+      A10026_004:     Occupied Housing Units: Less than $20,000: 20 to 29 Percent
+      A10026_005:     Occupied Housing Units: Less than $20,000: 30 Percent or More
+      A10026_006:     Occupied Housing Units: $20,000 to $34,999
+      A10026_007:     Occupied Housing Units: $20,000 to $34,999: Less than 20 Percent
+      A10026_008:     Occupied Housing Units: $20,000 to $34,999: 20 to 29 Percent
+      A10026_009:     Occupied Housing Units: $20,000 to $34,999: 30 Percent or More
+      A10026_010:     Occupied Housing Units: $35,000 to $49,999
+      A10026_011:     Occupied Housing Units: $35,000 to $49,999: Less than 20 Percent
+      A10026_012:     Occupied Housing Units: $35,000 to $49,999: 20 to 29 Percent
+      A10026_013:     Occupied Housing Units: $35,000 to $49,999: 30 Percent or More
+      A10026_014:     Occupied Housing Units: $50,000 to $74,999
+      A10026_015:     Occupied Housing Units: $50,000 to $74,999: Less than 20 Percent
+      A10026_016:     Occupied Housing Units: $50,000 to $74,999: 20 to 29 Percent
+      A10026_017:     Occupied Housing Units: $50,000 to $74,999: 30 Percent or More
+      A10026_018:     Occupied Housing Units: $75,000 or More
+      A10026_019:     Occupied Housing Units: $75,000 or More: Less than 20 Percent
+      A10026_020:     Occupied Housing Units: $75,000 or More: 20 to 29 Percent
+      A10026_021:     Occupied Housing Units: $75,000 or More: 30 Percent or More
+      A10026_022:     Occupied Housing Units: Zero or Negative Income
+      A10026_023:     Occupied Housing Units: No Cash Rent
+      B25072001:      Total
+      B25072002:      Total: Householder 15 To 24 Years
+      B25072003:      Total: Householder 15 To 24 Years: Less Than 20.0 Percent
+      B25072004:      Total: Householder 15 To 24 Years: 20.0 To 24.9 Percent
+      B25072005:      Total: Householder 15 To 24 Years: 25.0 To 29.9 Percent
+      B25072006:      Total: Householder 15 To 24 Years: 30.0 To 34.9 Percent
+      B25072007:      Total: Householder 15 To 24 Years: 35.0 Percent Or More
+      B25072008:      Total: Householder 15 To 24 Years: Not Computed
+      B25072009:      Total: Householder 25 To 34 Years
+      B25072010:      Total: Householder 25 To 34 Years: Less Than 20.0 Percent
+      B25072011:      Total: Householder 25 To 34 Years: 20.0 To 24.9 Percent
+      B25072012:      Total: Householder 25 To 34 Years: 25.0 To 29.9 Percent
+      B25072013:      Total: Householder 25 To 34 Years: 30.0 To 34.9 Percent
+      B25072014:      Total: Householder 25 To 34 Years: 35.0 Percent Or More
+      B25072015:      Total: Householder 25 To 34 Years: Not Computed
+      B25072016:      Total: Householder 35 To 64 Years
+      B25072017:      Total: Householder 35 To 64 Years: Less Than 20.0 Percent
+      B25072018:      Total: Householder 35 To 64 Years: 20.0 To 24.9 Percent
+      B25072019:      Total: Householder 35 To 64 Years: 25.0 To 29.9 Percent
+      B25072020:      Total: Householder 35 To 64 Years: 30.0 To 34.9 Percent
+      B25072021:      Total: Householder 35 To 64 Years: 35.0 Percent Or More
+      B25072022:      Total: Householder 35 To 64 Years: Not Computed
+      B25072023:      Total: Householder 65 Years And Over
+      B25072024:      Total: Householder 65 Years And Over: Less Than 20.0 Percent
+      B25072025:      Total: Householder 65 Years And Over: 20.0 To 24.9 Percent
+      B25072026:      Total: Householder 65 Years And Over: 25.0 To 29.9 Percent
+      B25072027:      Total: Householder 65 Years And Over: 30.0 To 34.9 Percent
+      B25072028:      Total: Householder 65 Years And Over: 35.0 Percent Or More
+      B25072029:      Total: Householder 65 Years And Over: Not Computed
+      B25072001s:     Std. Error: Total
+      B25072002s:     Std. Error: Total: Householder 15 To 24 Years
+      B25072003s:     Std. Error: Total: Householder 15 To 24 Years: Less Than 20.0 Percent
+      B25072004s:     Std. Error: Total: Householder 15 To 24 Years: 20.0 To 24.9 Percent
+      B25072005s:     Std. Error: Total: Householder 15 To 24 Years: 25.0 To 29.9 Percent
+      B25072006s:     Std. Error: Total: Householder 15 To 24 Years: 30.0 To 34.9 Percent
+      B25072007s:     Std. Error: Total: Householder 15 To 24 Years: 35.0 Percent Or More
+      B25072008s:     Std. Error: Total: Householder 15 To 24 Years: Not Computed
+      B25072009s:     Std. Error: Total: Householder 25 To 34 Years
+      B25072010s:     Std. Error: Total: Householder 25 To 34 Years: Less Than 20.0 Percent
+      B25072011s:     Std. Error: Total: Householder 25 To 34 Years: 20.0 To 24.9 Percent
+      B25072012s:     Std. Error: Total: Householder 25 To 34 Years: 25.0 To 29.9 Percent
+      B25072013s:     Std. Error: Total: Householder 25 To 34 Years: 30.0 To 34.9 Percent
+      B25072014s:     Std. Error: Total: Householder 25 To 34 Years: 35.0 Percent Or More
+      B25072015s:     Std. Error: Total: Householder 25 To 34 Years: Not Computed
+      B25072016s:     Std. Error: Total: Householder 35 To 64 Years
+      B25072017s:     Std. Error: Total: Householder 35 To 64 Years: Less Than 20.0 Percent
+      B25072018s:     Std. Error: Total: Householder 35 To 64 Years: 20.0 To 24.9 Percent
+      B25072019s:     Std. Error: Total: Householder 35 To 64 Years: 25.0 To 29.9 Percent
+      B25072020s:     Std. Error: Total: Householder 35 To 64 Years: 30.0 To 34.9 Percent
+      B25072021s:     Std. Error: Total: Householder 35 To 64 Years: 35.0 Percent Or More
+      B25072022s:     Std. Error: Total: Householder 35 To 64 Years: Not Computed
+      B25072023s:     Std. Error: Total: Householder 65 Years And Over
+      B25072024s:     Std. Error: Total: Householder 65 Years And Over: Less Than 20.0 Percent
+      B25072025s:     Std. Error: Total: Householder 65 Years And Over: 20.0 To 24.9 Percent
+      B25072026s:     Std. Error: Total: Householder 65 Years And Over: 25.0 To 29.9 Percent
+      B25072027s:     Std. Error: Total: Householder 65 Years And Over: 30.0 To 34.9 Percent
+      B25072028s:     Std. Error: Total: Householder 65 Years And Over: 35.0 Percent Or More
+      B25072029s:     Std. Error: Total: Householder 65 Years And Over: Not Computed
+      B25093001:      Total
+      B25093002:      Total: Householder 15 To 24 Years
+      B25093003:      Total: Householder 15 To 24 Years: Less Than 20.0 Percent
+      B25093004:      Total: Householder 15 To 24 Years: 20.0 To 24.9 Percent
+      B25093005:      Total: Householder 15 To 24 Years: 25.0 To 29.9 Percent
+      B25093006:      Total: Householder 15 To 24 Years: 30.0 To 34.9 Percent
+      B25093007:      Total: Householder 15 To 24 Years: 35.0 Percent Or More
+      B25093008:      Total: Householder 15 To 24 Years: Not Computed
+      B25093009:      Total: Householder 25 To 34 Years
+      B25093010:      Total: Householder 25 To 34 Years: Less Than 20.0 Percent
+      B25093011:      Total: Householder 25 To 34 Years: 20.0 To 24.9 Percent
+      B25093012:      Total: Householder 25 To 34 Years: 25.0 To 29.9 Percent
+      B25093013:      Total: Householder 25 To 34 Years: 30.0 To 34.9 Percent
+      B25093014:      Total: Householder 25 To 34 Years: 35.0 Percent Or More
+      B25093015:      Total: Householder 25 To 34 Years: Not Computed
+      B25093016:      Total: Householder 35 To 64 Years
+      B25093017:      Total: Householder 35 To 64 Years: Less Than 20.0 Percent
+      B25093018:      Total: Householder 35 To 64 Years: 20.0 To 24.9 Percent
+      B25093019:      Total: Householder 35 To 64 Years: 25.0 To 29.9 Percent
+      B25093020:      Total: Householder 35 To 64 Years: 30.0 To 34.9 Percent
+      B25093021:      Total: Householder 35 To 64 Years: 35.0 Percent Or More
+      B25093022:      Total: Householder 35 To 64 Years: Not Computed
+      B25093023:      Total: Householder 65 Years And Over
+      B25093024:      Total: Householder 65 Years And Over: Less Than 20.0 Percent
+      B25093025:      Total: Householder 65 Years And Over: 20.0 To 24.9 Percent
+      B25093026:      Total: Householder 65 Years And Over: 25.0 To 29.9 Percent
+      B25093027:      Total: Householder 65 Years And Over: 30.0 To 34.9 Percent
+      B25093028:      Total: Householder 65 Years And Over: 35.0 Percent Or More
+      B25093029:      Total: Householder 65 Years And Over: Not Computed
+      B25093001s:     Std. Error: Total
+      B25093002s:     Std. Error: Total: Householder 15 To 24 Years
+      B25093003s:     Std. Error: Total: Householder 15 To 24 Years: Less Than 20.0 Percent
+      B25093004s:     Std. Error: Total: Householder 15 To 24 Years: 20.0 To 24.9 Percent
+      B25093005s:     Std. Error: Total: Householder 15 To 24 Years: 25.0 To 29.9 Percent
+      B25093006s:     Std. Error: Total: Householder 15 To 24 Years: 30.0 To 34.9 Percent
+      B25093007s:     Std. Error: Total: Householder 15 To 24 Years: 35.0 Percent Or More
+      B25093008s:     Std. Error: Total: Householder 15 To 24 Years: Not Computed
+      B25093009s:     Std. Error: Total: Householder 25 To 34 Years
+      B25093010s:     Std. Error: Total: Householder 25 To 34 Years: Less Than 20.0 Percent
+      B25093011s:     Std. Error: Total: Householder 25 To 34 Years: 20.0 To 24.9 Percent
+      B25093012s:     Std. Error: Total: Householder 25 To 34 Years: 25.0 To 29.9 Percent
+      B25093013s:     Std. Error: Total: Householder 25 To 34 Years: 30.0 To 34.9 Percent
+      B25093014s:     Std. Error: Total: Householder 25 To 34 Years: 35.0 Percent Or More
+      B25093015s:     Std. Error: Total: Householder 25 To 34 Years: Not Computed
+      B25093016s:     Std. Error: Total: Householder 35 To 64 Years
+      B25093017s:     Std. Error: Total: Householder 35 To 64 Years: Less Than 20.0 Percent
+      B25093018s:     Std. Error: Total: Householder 35 To 64 Years: 20.0 To 24.9 Percent
+      B25093019s:     Std. Error: Total: Householder 35 To 64 Years: 25.0 To 29.9 Percent
+      B25093020s:     Std. Error: Total: Householder 35 To 64 Years: 30.0 To 34.9 Percent
+      B25093021s:     Std. Error: Total: Householder 35 To 64 Years: 35.0 Percent Or More
+      B25093022s:     Std. Error: Total: Householder 35 To 64 Years: Not Computed
+      B25093023s:     Std. Error: Total: Householder 65 Years And Over
+      B25093024s:     Std. Error: Total: Householder 65 Years And Over: Less Than 20.0 Percent
+      B25093025s:     Std. Error: Total: Householder 65 Years And Over: 20.0 To 24.9 Percent
+      B25093026s:     Std. Error: Total: Householder 65 Years And Over: 25.0 To 29.9 Percent
+      B25093027s:     Std. Error: Total: Householder 65 Years And Over: 30.0 To 34.9 Percent
+      B25093028s:     Std. Error: Total: Householder 65 Years And Over: 35.0 Percent Or More
+      B25093029s:     Std. Error: Total: Householder 65 Years And Over: Not Computed
+
+
+
+
+--------------------------------------------------------------------------------
+Citation and Use of Data
+--------------------------------------------------------------------------------
+ 
+All persons are granted a limited license to use this documentation and the
+accompanying data, subject to the following conditions:
+
+* Publications and research reports employing the data
+  must cite it appropriately. The citation should include the following:
+
+	  www.socialexplorer.com
+	  New York City, NY: Social Explorer 2023
+
+
+* Citations should also include the URL for this report:
+
+    http://www.socialexplorer.com/pub/reportdata/HtmlResults.aspx?reportid=R13342071
+
+If you have any questions contact info@socialexplorer.com
